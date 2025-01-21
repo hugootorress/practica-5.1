@@ -3,7 +3,7 @@ version: '3.4'
 services:
   mysql:
     image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    #command: --default-authentication-plugin=mysql_native_password
     ports: 
       - 3306:3306
     environment: 
@@ -31,7 +31,7 @@ services:
       - mysql
 
   prestashop:
-    image: prestashop/prestashop
+    image: prestashop/prestashop:8
     environment: 
       - DB_SERVER=mysql
     volumes:
